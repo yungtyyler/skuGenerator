@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/style.css">
+
+    <title>SKU Generator | Tyler Varzeas</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="./src/images/logo.png" alt="Logo" class="logo">
+            </div>
+            <div class="links">
+                <a href="#about" class="link-item">About</a>
+                <a href="#main" class="link-item">Get Started</a>
+                <a href="#about" class="link-item">Contact</a>
+            </div>
+        </nav>
+    </header>
+    <section class="main" id="main">
+        <h1>SKU Information</h1>
+        <form>
+            <fieldset>
+                <legend>SKU Generator</legend>
+                <div class="step-1">
+                    <label for="product-brand">Enter Brand Initials Here:</label><br>
+                    <input type="text" id="product-brand" name="product-brand" maxlength="2"
+                        oninput="this.value = this.value.toUpperCase()" placeholder="Ex: MD, BK, PG...">
+                    <br>
+                </div>
+                <div class="step-2">
+                    <label for="product-type">Enter Type of Product Here:</label><br>
+                    <input type="text" id="product-type" name="product-type" maxlength="2"
+                        oninput="this.value = this.value.toUpperCase()"
+                        placeholder="Ex: DF (dog food), DT (dog toy)...">
+                    <br>
+                </div>
+                <div class="step-3">
+                    <label for="product-size">Enter Size Here:</label><br>
+                    <input type="text" id="product-size" name="product-size" maxlength="5"
+                        oninput="this.value = this.value.toUpperCase()"
+                        placeholder="Ex: SM, MD, LG, NA (not applicable)">
+                    <br>
+                </div>
+                <div class="step-4">
+                    <label for="product-number">Number of Units</label><br>
+                    <input type="number" id="product-number" name="product-number" placeholder="Ex: 12, 5, 2...">
+                    <br>
+                </div>
+                <button type="button" class="submit" id="submit">Submit</button>
+            </fieldset>
+        </form>
+
+        <h1>Results</h1>
+        <div class="results" id="results">
+        </div>
+        <div class="thank-you" id="thank-you">
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="about" id="about">
+            <h2>About Me</h2>
+            <p>My name is Tyler Varzeas, I am a junior web developer. I am young, passionate, and driven to continue to
+                grow and advance my skills in web development while producing the highest quality content for my
+                clients.</p>
+        </div>
+        <div class="references">
+            <ul>
+                <li class="ref-link-item">Contact
+                    <li />
+                <li class="ref-link-item">Privacy
+                    <li />
+                <li class="ref-link-item">Terms of Use
+                    <li />
+            </ul>
+        </div>
+    </footer>
+
+    <script src="./src/script.js"></script>
+</body>
+
+</html>
